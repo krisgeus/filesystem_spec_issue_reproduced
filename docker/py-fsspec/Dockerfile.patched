@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY head-and-get-script.py ./head-and-get-script.py
 
 # monkey patch fsspec
-COPY http.py /usr/local/lib/python3.9/site-packages/fsspec/implementations/http.py
+#COPY http.py /usr/local/lib/python3.9/site-packages/fsspec/implementations/http.py
+
+RUN pip install --no-cache-dir git+https://github.com/intake/filesystem_spec.git@refs/pull/718/head
 
 CMD [ "python", "./head-and-get-script.py" ]
