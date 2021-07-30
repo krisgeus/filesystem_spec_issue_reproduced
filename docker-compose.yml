@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  mockserver:
+    build:
+      context: ./docker/mockserver-s3
+      dockerfile: Dockerfile
+    command: ["-serverPort", "1080", "-logLevel", "WARN"]
+    ports:
+      - 1080:1080
+      - 1081:1081
+    environment:
+      - SERVER_PORT="1080,1081"
+      - MOCKSERVER_WATCH_INITIALIZATION_JSON=true
+      - MOCKSERVER_INITIALIZATION_JSON_PATH=/init.json
+
+  python:
+    build:
+      context: ./docker/py-fsspec
+      dockerfile: Dockerfile
+    depends_on:
+      - mockserver
+
+  python-patched:
+    build:
+      context: ./docker/py-fsspec
+      dockerfile: Dockerfile.patched
+    depends_on:
+      - mockserver

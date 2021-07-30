@@ -1,0 +1,176 @@
+[
+  {
+    "httpRequest": {
+      "path": "/demo-s3-output/output/data/demo/spark/cars-all/part-00000-7512f0aa-e860-483c-aea5-e6bb2dd493ac-c000.snappy.parquet",
+      "method": "HEAD",
+      "queryStringParameters": [
+        {
+          "name": "X-Amz-Algorithm",
+          "values": [
+              "AWS4-HMAC-SHA256"
+          ]
+        },
+        {
+          "name": "X-Amz-Date",
+          "values": [
+              "20210712T192424Z"
+          ]
+        },
+        {
+          "name": "X-Amz-SignedHeaders",
+          "values": [
+              "host"
+          ]
+        },
+        {
+          "name": "X-Amz-Expires",
+          "values": [
+              "900"
+          ]
+        },
+        {
+          "name": "X-Amz-Credential",
+          "values": [
+              "test/20210712/us-east-1/s3/aws4_request"
+          ]
+        },
+        {
+          "name": "X-Amz-Signature",
+          "values": [
+              "a5daeb3fec5cf0ac7f1dce877c41b0c8c24eab7b63c72a3f1d8d8f9e2e4ef6e9"
+          ]
+        }
+      ]
+    },
+    "httpResponse": {
+      "body": "Error validating signature",
+      "statusCode": 403,
+      "headers": {
+        "Content-Length": [ "123" ],
+        "Content-Type": [ "text/plain" ]
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/demo-s3-output/output/data/demo/spark/cars-all/part-00000-7512f0aa-e860-483c-aea5-e6bb2dd493ac-c000.snappy.parquet",
+      "method": "GET",
+      "headers": {
+        "Range": [ "bytes=0-122" ]
+      },
+      "queryStringParameters": [
+        {
+          "name": "X-Amz-Algorithm",
+          "values": [
+              "AWS4-HMAC-SHA256"
+          ]
+        },
+        {
+          "name": "X-Amz-Date",
+          "values": [
+              "20210712T192424Z"
+          ]
+        },
+        {
+          "name": "X-Amz-SignedHeaders",
+          "values": [
+              "host"
+          ]
+        },
+        {
+          "name": "X-Amz-Expires",
+          "values": [
+              "900"
+          ]
+        },
+        {
+          "name": "X-Amz-Credential",
+          "values": [
+              "test/20210712/us-east-1/s3/aws4_request"
+          ]
+        },
+        {
+          "name": "X-Amz-Signature",
+          "values": [
+              "a5daeb3fec5cf0ac7f1dce877c41b0c8c24eab7b63c72a3f1d8d8f9e2e4ef6e9"
+          ]
+        }
+      ]
+    },
+    "httpResponse": {
+      "body": {
+        "type": "BINARY",
+        "base64Bytes": "UEFSMRUAFZABFZIBLBUKFQAVBhUIHDYAKAZUaW1hcnUYEUplbWVwcGUtc3VyLU1ldXNlAAAASGgCAAAAAx8GAAAAVGltYXJ1BwAAAExhIENydXoBFaBQZXNzYWMRAAAASmVtZXBwZS1zdXItTWV1c2UKAAAAUGFrIFBh",
+        "contentType": "application/octet-stream"
+      },
+      "statusCode": 200,
+      "headers": {
+        "Content-Length": [ "123" ],
+        "Content-Md5": [ "NzPnVo3HF24fzouNvQhLmQ==" ],
+        "Content-Type": [ "application/octet-stream" ]
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/demo-s3-output/output/data/demo/spark/cars-all/part-00000-7512f0aa-e860-483c-aea5-e6bb2dd493ac-c000.snappy.parquet",
+      "method": "GET",
+      "headers": {
+        "Content-Length|Range": [".*"],
+        "?Content-Length": ["0"],
+        "?Range": ["bytes=0-1999"]
+      },
+      "queryStringParameters": [
+        {
+          "name": "X-Amz-Algorithm",
+          "values": [
+              "AWS4-HMAC-SHA256"
+          ]
+        },
+        {
+          "name": "X-Amz-Date",
+          "values": [
+              "20210712T192424Z"
+          ]
+        },
+        {
+          "name": "X-Amz-SignedHeaders",
+          "values": [
+              "host"
+          ]
+        },
+        {
+          "name": "X-Amz-Expires",
+          "values": [
+              "900"
+          ]
+        },
+        {
+          "name": "X-Amz-Credential",
+          "values": [
+              "test/20210712/us-east-1/s3/aws4_request"
+          ]
+        },
+        {
+          "name": "X-Amz-Signature",
+          "values": [
+              "a5daeb3fec5cf0ac7f1dce877c41b0c8c24eab7b63c72a3f1d8d8f9e2e4ef6e9"
+          ]
+        }
+      ]
+    },
+    "httpResponse": {
+      "body": {
+        "type": "BINARY",
+        "base64Bytes": "UEFSMRUAFZABFZIBLBUKFQAVBhUIHDYAKAZUaW1hcnUYEUplbWVwcGUtc3VyLU1ldXNlAAAASGgCAAAAAx8GAAAAVGltYXJ1BwAAAExhIENydXoBFaBQZXNzYWMRAAAASmVtZXBwZS1zdXItTWV1c2UKAAAAUGFrIFBhdHRhbhUAFWgVaiwVChUAFQYVCBw2ACgGeWVsbG93GAVncmVlbgAAADQ8AgAAAAMfBgAAAHZpb2xldAEKfG9yYW5nZQMAAAByZWQFAAAAZ3JlZW4GAAAAeWVsbG93FQAVbhVwLBUKFQAVBhUIHDYAKARPbWFuGAVBcnViYQAAADdgAgAAAAMfBAAAAE9tYW4HAAAARGVubWFyawELZEJ1cnVuZGkFAAAAQXJ1YmEGAAAAR2FtYmlhFQAVXBVaLBUKFQAVBhUIHBgIlogRXgAAAAAYCD5FnloAAAAAFgAoCJaIEV4AAAAAGAg+RZ5aAAAAAAAAAC5EAgAAAAMflogRXgAAAAA4GjNcAQgI/z0GBQg8PkWeWgAAAADikaFdAAAAABUAFVwVYCwVChUAFQYVCBwYCJJc/kP6rSRAGAisrdhfdjlRwBYAKAiSXP5D+q0kQBgIrK3YX3Y5UcAAAAAutAIAAAADH5Jc/kP6rSRAoKaWrfUNRsCsrdhfdjlRwNB+pIgM80XA81meB3ebQsAVABVcFWAsFQoVABUGFQgcGAiaJQFqapkTQBgILZW3I5yRZcAWACgImiUBamqZE0AYCC2VtyOckWXAAAAALrQCAAAAAx8tlbcjnJFlwCDSb18HzgNAmiUBamqZE0CTHRuBeLFPwNEF9S1zjFfAFQAVaBVqLBUKFQAVBhUIHDYAKAdQZXVnZW90GAVBY3VyYQAAADQ8AgAAAAMfBQAAAEFjdXJhBAEJfHVkaQMAAABCTVcHAAAAUGV1Z2VvdAcAAABEYWltbGVyFQIZjEgMc3Bhcmtfc2NoZW1hFQ4AFQwlAhgEY2l0eSUAABUMJQIYBWNvbG9yJQAAFQwlAhgHY291bnRyeSUAABUEJQIYAmR0ABUKJQIYA2xhdAAVCiUCGANsb24AFQwlAhgEdHlwZSUAABYKGRwZfCYIHBUMGTUGAAgZGARjaXR5FQIWChb0ARb2ASYIPDYAKAZUaW1hcnUYEUplbWVwcGUtc3VyLU1ldXNlABkcFQAVABUCAAAAJv4BHBUMGTUGAAgZGAVjb2xvchUCFgoWsAEWsgEm/gE8NgAoBnllbGxvdxgFZ3JlZW4AGRwVABUAFQIAAAAmsAMcFQwZNQYACBkYB2NvdW50cnkVAhYKFrIBFrQBJrADPDYAKARPbWFuGAVBcnViYQAZHBUAFQAVAgAAACbkBBwVBBk1BgAIGRgCZHQVAhYKFtYBFtQBJuQEPBgIlogRXgAAAAAYCD5FnloAAAAAFgAoCJaIEV4AAAAAGAg+RZ5aAAAAAAAZHBUAFQAVAgAAACa4BhwVChk1BgAIGRgDbGF0FQIWChbWARbaASa4BjwYCJJc/kP6rSRAGAisrdhfdjlRwBYAKAiSXP5D+q0kQBgIrK3YX3Y5UcAAGRwVABUAFQIAAAAmkggcFQoZNQYACBkYA2xvbhUCFgoW1gEW2gEmkgg8GAiaJQFqapkTQBgILZW3I5yRZcAWACgImiUBamqZE0AYCC2VtyOckWXAABkcFQAVABUCAAAAJuwJHBUMGTUGAAgZGAR0eXBlFQIWChayARa0ASbsCTw2ACgHUGV1Z2VvdBgFQWN1cmEAGRwVABUAFQIAAAAWigsWCgAZLBgYb3JnLmFwYWNoZS5zcGFyay52ZXJzaW9uGAUzLjEuMQAYKW9yZy5hcGFjaGUuc3Bhcmsuc3FsLnBhcnF1ZXQucm93Lm1ldGFkYXRhGMwDeyJ0eXBlIjoic3RydWN0IiwiZmllbGRzIjpbeyJuYW1lIjoiY2l0eSIsInR5cGUiOiJzdHJpbmciLCJudWxsYWJsZSI6dHJ1ZSwibWV0YWRhdGEiOnt9fSx7Im5hbWUiOiJjb2xvciIsInR5cGUiOiJzdHJpbmciLCJudWxsYWJsZSI6dHJ1ZSwibWV0YWRhdGEiOnt9fSx7Im5hbWUiOiJjb3VudHJ5IiwidHlwZSI6InN0cmluZyIsIm51bGxhYmxlIjp0cnVlLCJtZXRhZGF0YSI6e319LHsibmFtZSI6ImR0IiwidHlwZSI6ImxvbmciLCJudWxsYWJsZSI6dHJ1ZSwibWV0YWRhdGEiOnt9fSx7Im5hbWUiOiJsYXQiLCJ0eXBlIjoiZG91YmxlIiwibnVsbGFibGUiOnRydWUsIm1ldGFkYXRhIjp7fX0seyJuYW1lIjoibG9uIiwidHlwZSI6ImRvdWJsZSIsIm51bGxhYmxlIjp0cnVlLCJtZXRhZGF0YSI6e319LHsibmFtZSI6InR5cGUiLCJ0eXBlIjoic3RyaW5nIiwibnVsbGFibGUiOnRydWUsIm1ldGFkYXRhIjp7fX1dfQAYSnBhcnF1ZXQtbXIgdmVyc2lvbiAxLjEwLjEgKGJ1aWxkIGE4OWRmOGY5OTMyYjZlZjY2MzNkMDYwNjllNTBjOWI3OTcwYmViZDEpGXwcAAAcAAAcAAAcAAAcAAAcAAAcAAAA+AQAAFBBUjE=",
+        "contentType": "application/octet-stream"
+      },
+      "statusCode": 200,
+      "headers": {
+        "Content-Length": [ "2000" ],
+        "Content-Md5": [ "NzPnVo3HF24fzouNvQhLmQ==" ],
+        "Content-Type": [ "application/octet-stream" ]
+      }
+    }
+  }
+]
